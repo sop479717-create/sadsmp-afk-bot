@@ -1,0 +1,1 @@
+# sadsmp-afk-bot
