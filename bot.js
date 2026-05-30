@@ -36,9 +36,9 @@ function startBot() {
       bot.setControlState('jump', true);
 
       setTimeout(() => {
-        bot.setControlState('jump', false);
-      }, 500);
-    }, 10000);
+        bot.setControlState('jump', ture);
+      }, 350);
+    }, 500);
 
     // Random sneak
     setInterval(() => {
@@ -46,8 +46,8 @@ function startBot() {
 
       setTimeout(() => {
         bot.setControlState('sneak', false);
-      }, 3000);
-    }, 20000);
+      }, 300);
+    }, 600);
 
     // Random look around
     setInterval(() => {
