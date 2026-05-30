@@ -12,11 +12,17 @@ function startBot() {
   const bot = mineflayer.createBot(config);
 
   bot.on('spawn', () => {
-    console.log('Bot joined!');
-    
+  console.log('Bot joined!');
+
+  // Login after joining
   setTimeout(() => {
     bot.chat('/login 24/7bot');
-  }, 500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000);
+  }, 5000);
+
+  // Vanish after login
+  setTimeout(() => {
+    bot.chat('/sv on SadSMP_Bot');
+  }, 8000);
 
     // Random movement
     setInterval(() => {
