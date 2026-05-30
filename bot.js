@@ -23,6 +23,7 @@ function startBot() {
   setTimeout(() => {
     bot.chat('/sv on SadSMP_Bot');
   },  500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000);
+    
     // Random movement
     setInterval(() => {
       const actions = ['forward', 'back', 'left', 'right'];
