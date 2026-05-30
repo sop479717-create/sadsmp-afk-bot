@@ -18,10 +18,6 @@ function startBot() {
   bot.chat('/login 24/7bot');
 }, 50);
 
-setTimeout(() => {
-  bot.chat('/vanish');
-}, 80);
-
     bot.on('messagestr', (msg) => {
   console.log('[CHAT]', msg);
 });
