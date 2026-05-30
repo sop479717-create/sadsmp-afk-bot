@@ -1,3 +1,4 @@
+console.log("Bot file started!");
 const mineflayer = require('mineflayer');
 
 const config = {
