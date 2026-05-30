@@ -13,6 +13,9 @@ function startBot() {
 
   bot.on('spawn', () => {
     console.log('Bot joined!');
+    setTimeout(() => {
+  bot.chat('/register 24/7bot');
+}, 5000);
 
     // Random movement
     setInterval(() => {
@@ -57,8 +60,7 @@ function startBot() {
     const messages = [
       'Hello everyone!',
       'Sad SMP ❤️',
-      'Have a great day!',
-      'AFK Bot Online',
+      'Have a great day!'
       'Enjoy the server!'
     ];
 
