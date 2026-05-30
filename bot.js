@@ -19,9 +19,17 @@ function startBot() {
 }, 50);
 
 setTimeout(() => {
-  bot.chat('/sv on SadSMP_Bot');
+  bot.chat('/sv on');
 }, 80);
 
+    bot.on('messagestr', (msg) => {
+  console.log('[CHAT]', msg);
+});
+
+    bot.on('end', () => {
+  console.log('Disconnected');
+});
+    
     // Random movement
     setInterval(() => {
       const actions = ['forward', 'back', 'left', 'right'];
