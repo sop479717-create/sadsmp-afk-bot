@@ -18,9 +18,9 @@ function startBot() {
   bot.chat('/login 24/7bot');
 }, 50);
 
-     setTimeout(() => {
-    bot.chat('/supervanish');
-  }, 80);
+ setTimeout(() => {
+    bot.chat('/sv on');
+  }, 8000);
 });
 
     bot.on('messagestr', (msg) => {
