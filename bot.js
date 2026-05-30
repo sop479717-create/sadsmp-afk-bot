@@ -36,7 +36,7 @@ function startBot() {
       bot.setControlState('jump', true);
 
       setTimeout(() => {
-        bot.setControlState('jump', ture);
+        bot.setControlState('jump', false);
       }, 350);
     }, 500);
 
