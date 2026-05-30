@@ -17,12 +17,12 @@ function startBot() {
   // Login after joining
   setTimeout(() => {
     bot.chat('/login 24/7bot');
-  }, 5000);
+  }, 50);
 
   // Vanish after login
   setTimeout(() => {
     bot.chat('/sv on SadSMP_Bot');
-  }, 8000);
+  }, 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999);
 
     // Random movement
     setInterval(() => {
