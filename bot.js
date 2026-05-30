@@ -61,7 +61,8 @@ function startBot() {
     const messages = [
       'Hello everyone!',
       'Sad SMP ❤️',
-      'Have a great day!'
+      'Have a great day!',
+      'AFK Bot Online',
       'Enjoy the server!'
     ];
 
