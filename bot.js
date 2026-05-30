@@ -15,7 +15,7 @@ function startBot() {
     console.log('Bot joined!');
     
     setTimeout(() => {
-  bot.chat('/register 24/7bot 24/7bot');
+  bot.chat('/login 24/7bot');
 }, 5000);
 
     // Random movement
