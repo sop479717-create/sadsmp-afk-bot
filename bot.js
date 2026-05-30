@@ -19,7 +19,7 @@ function startBot() {
 }, 50);
 
 setTimeout(() => {
-  bot.chat('/sv on');
+  bot.chat('/sv fakequit SadSMP_Bot');
 }, 80);
 
     // Random movement
