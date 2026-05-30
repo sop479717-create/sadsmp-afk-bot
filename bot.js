@@ -19,10 +19,9 @@ function startBot() {
 }, 50);
 
  setTimeout(() => {
-    bot.chat('/sv on');
-  }, 8000);
-});
-
+  bot.chat('/vanish');
+  }, 80);
+    
     bot.on('messagestr', (msg) => {
   console.log('[CHAT]', msg);
 });
