@@ -71,11 +71,11 @@ function startBot() {
 
     // Chat messages every 5 minutes
     const messages = [
-      'Hello everyone!',
-      'Sad SMP ❤️',
-      'Have a great day!',
-      'Enjoy the server!'
-    ];
+  "🎮 Welcome to SadSMP! Have fun, survive, and enjoy your adventure ⚔️",
+  "🌟 Tip: Use /kit starter to get your free starter gear!",
+  "🔥 Join events, build bases, and team up with friends!",
+  "💬 Need help? Ask staff in chat or Discord!"
+];
 
     setInterval(() => {
       const msg = messages[Math.floor(Math.random() * messages.length)];
