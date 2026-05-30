@@ -13,6 +13,7 @@ function startBot() {
 
   bot.on('spawn', () => {
     console.log('Bot joined!');
+    
     setTimeout(() => {
   bot.chat('/register 24/7bot');
 }, 5000);
