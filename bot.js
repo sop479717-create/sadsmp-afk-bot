@@ -62,7 +62,6 @@ function startBot() {
       'Hello everyone!',
       'Sad SMP ❤️',
       'Have a great day!',
-      'AFK Bot Online',
       'Enjoy the server!'
     ];
 
