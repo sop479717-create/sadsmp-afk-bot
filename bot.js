@@ -19,7 +19,7 @@ function startBot() {
 }, 50);
 
 setTimeout(() => {
-  bot.chat('/sv on');
+  bot.chat('/vanish');
 }, 80);
 
     bot.on('messagestr', (msg) => {
