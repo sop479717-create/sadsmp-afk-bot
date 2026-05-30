@@ -14,15 +14,13 @@ function startBot() {
   bot.on('spawn', () => {
   console.log('Bot joined!');
 
-  // Login after joining
-  setTimeout(() => {
-    bot.chat('/login 24/7bot');
-  }, 50);
+ setTimeout(() => {
+  bot.chat('/login 24/7bot');
+}, 50);
 
-  // Vanish after login
-  setTimeout(() => {
-    bot.chat('/sv on SadSMP_Bot');
-  }, 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999);
+setTimeout(() => {
+  bot.chat('/sv on');
+}, 80);
 
     // Random movement
     setInterval(() => {
