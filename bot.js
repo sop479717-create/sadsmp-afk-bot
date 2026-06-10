@@ -3,7 +3,7 @@ const mineflayer = require('mineflayer');
 
 const config = {
   host: 'sgp2.bytenut.cc:16290',
-  port: 25565,
+  port: 16290,
   username: 'SadSMP_Bot',
   version: false
 };
