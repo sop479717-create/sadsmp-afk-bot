@@ -83,6 +83,23 @@ function startBot() {
     }, 300000);
   });
 
+  bot.on('messagestr', (message) => {
+    console.log(message);
+
+    const match = message.match(/([a-z0-9]{6})/i);
+
+    if (message.includes('Enter code') && match) {
+        const code = match[1];
+
+        console.log('Verification code found:', code);
+
+        setTimeout(() => {
+            bot.chat(code);
+            console.log('Sent code:', code);
+        }, 1000);
+    }
+});
+
   bot.on('end', () => {
     console.log('Disconnected. Reconnecting in 10 seconds...');
     setTimeout(startBot, 10000);
