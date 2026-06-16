@@ -22,10 +22,6 @@ function startBot() {
   bot.chat('/supervanish');
   }, 80);
     
-    bot.on('messagestr', (msg) => {
-  console.log('[CHAT]', msg);
-});
-
     bot.on('end', () => {
   console.log('Disconnected');
 });
@@ -83,20 +79,23 @@ function startBot() {
     }, 300000);
   });
 
-  bot.on('messagestr', (message) => {
+    bot.on('messagestr', (message) => {
     console.log(message);
 
-    const match = message.match(/([a-z0-9]{6})/i);
+    if (message.includes('VERIFY') && message.includes('code')) {
 
-    if (message.includes('Enter code') && match) {
-        const code = match[1];
+        const match = message.match(/code\s+([a-z0-9]+)/i);
 
-        console.log('Verification code found:', code);
+        if (match) {
+            const code = match[1];
 
-        setTimeout(() => {
-            bot.chat(code);
-            console.log('Sent code:', code);
-        }, 1000);
+            console.log('Verification code found:', code);
+
+            setTimeout(() => {
+                bot.chat(code);
+                console.log('Sent code:', code);
+            }, 1000);
+        }
     }
 });
 
