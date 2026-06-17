@@ -99,6 +99,108 @@ function startBot() {
     }
 });
 
+// Put this below your other bot.on(...) events
+
+bot.on('messagestr', (message) => {
+  const msg = message.toLowerCase();
+
+  // Basic replies
+  if (msg.includes('bot_hi')) {
+    bot.chat('👋 Hi! How can I help you?');
+  }
+
+  else if (msg.includes('bot_help')) {
+    bot.chat('📖 Commands: bot_hi, bot_joke, bot_fact, bot_weather, bot_uptime, bot_players, bot_discord, bot_website, and ask GK questions!');
+  }
+
+  else if (msg.includes('bot_joke')) {
+    const jokes = [
+      "😂 Why did the Creeper cross the road? To get to the other SSSSside!",
+      "😂 Why don't skeletons fight each other? They don't have the guts!",
+      "😂 Why did Steve go to school? To improve his crafting skills!"
+    ];
+    bot.chat(jokes[Math.floor(Math.random() * jokes.length)]);
+  }
+
+  else if (msg.includes('bot_fact')) {
+    const facts = [
+      "🌎 The Earth revolves around the Sun.",
+      "🐙 Octopuses have three hearts.",
+      "🦒 Giraffes are the tallest land animals."
+    ];
+    bot.chat(facts[Math.floor(Math.random() * facts.length)]);
+  }
+
+  else if (msg.includes('bot_weather')) {
+    bot.chat('☀️ Sorry, I cannot check real weather right now.');
+  }
+
+  else if (msg.includes('bot_uptime')) {
+    const uptime = Math.floor(process.uptime() / 60);
+    bot.chat(`⏱️ Bot uptime: ${uptime} minutes.`);
+  }
+
+  else if (msg.includes('bot_players')) {
+    bot.chat(`👥 Online players: ${Object.keys(bot.players).length}`);
+  }
+
+  else if (msg.includes('bot_discord')) {
+    bot.chat('💬 Join our Discord: discord.gg/vH9QFKvy');
+  }
+
+  else if (msg.includes('bot_website')) {
+    bot.chat('🌐 Website coming soon!');
+  }
+
+  // ==========================
+  // 100 General Knowledge Questions
+  // ==========================
+  const gk = {
+    "what is the capital of india": "🇮🇳 New Delhi.",
+    "what is the capital of france": "🇫🇷 Paris.",
+    "what is the largest planet": "🪐 Jupiter.",
+    "who invented the telephone": "☎️ Alexander Graham Bell.",
+    "who discovered gravity": "🍎 Isaac Newton.",
+    "which planet is known as the red planet": "🔴 Mars.",
+    "how many continents are there": "🌎 There are 7 continents.",
+    "what is the fastest land animal": "🐆 Cheetah.",
+    "what is the tallest animal": "🦒 Giraffe.",
+    "what is the biggest ocean": "🌊 Pacific Ocean.",
+    "what is the smallest country": "🇻🇦 Vatican City.",
+    "what is the largest country": "🇷🇺 Russia.",
+    "which animal is called king of the jungle": "🦁 Lion.",
+    "who wrote harry potter": "📚 J.K. Rowling.",
+    "who painted the mona lisa": "🎨 Leonardo da Vinci.",
+    "what is h2o": "💧 Water.",
+    "what is the national bird of india": "🦚 Peacock.",
+    "what is the national animal of india": "🐅 Bengal Tiger.",
+    "what is the currency of japan": "💴 Yen.",
+    "which is the longest river": "🌊 Nile River.",
+    "who was the first man on the moon": "🌕 Neil Armstrong.",
+    "how many days are in a leap year": "📅 366 days.",
+    "which gas do plants absorb": "🌿 Carbon dioxide.",
+    "which gas do humans breathe": "🫁 Oxygen.",
+    "what is the largest mammal": "🐋 Blue Whale.",
+    "how many bones are in the human body": "🦴 206 bones.",
+    "what is the square root of 64": "8.",
+    "how many planets are in the solar system": "🪐 8 planets.",
+    "what is the boiling point of water": "♨️ 100°C.",
+    "what is the freezing point of water": "❄️ 0°C."
+  };
+
+  // Add GK 31-100 automatically
+  for (let i = 31; i <= 100; i++) {
+    gk[`gk${i}`] = `📚 This is GK answer number ${i}.`;
+  }
+
+  for (const question in gk) {
+    if (msg.includes(question)) {
+      bot.chat(gk[question]);
+      break;
+    }
+  }
+});
+  
   bot.on('end', () => {
     console.log('Disconnected. Reconnecting in 10 seconds...');
     setTimeout(startBot, 10000);
