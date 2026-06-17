@@ -2,8 +2,8 @@ console.log("Bot file started!");
 const mineflayer = require('mineflayer');
 
 const config = {
-  host: 'sgp2.bytenut.cc',
-  port: 16290,
+  host: 'sadsmp.mcsh.io',
+  port: 25565,
   username: 'SadSMP_Bot',
   version: false
 };
