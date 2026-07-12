@@ -4,7 +4,7 @@ const mineflayer = require('mineflayer');
 const config = {
   host: 'sadsmp.mcsh.io',
   port: 25565,
-  username: 'SadSMP_Bot',
+  username: 'BOT',
   version: false
 };
 
