@@ -15,7 +15,7 @@ function startBot() {
   console.log('Bot joined!');
 
  setTimeout(() => {
-  bot.chat('/login 27/7bot');
+  bot.chat('/register 27/7bot');
 }, 50);
 
  setTimeout(() => {
